@@ -130,9 +130,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 	ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural \
 	log.tag.Telephony=ERROR
 
-# Charger
+# Pixel charger animation
 PRODUCT_PACKAGES += \
-    charger_res_images
+    product_charger_res_images
 
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
