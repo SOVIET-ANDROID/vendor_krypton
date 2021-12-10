@@ -160,11 +160,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
 
+PRODUCT_PACKAGES += \
+    lawnicons
+
 TARGET_BUILD_LAWNCHAIR ?= true
 ifeq ($(strip $(TARGET_BUILD_LAWNCHAIR)),true)
 include vendor/lawnchair/lawnchair.mk
-# Lawnicons
-$(call inherit-product-if-exists, vendor/lawnicons/overlay.mk)
+$(call inherit-product, vendor/lawnicons/overlay.mk)
 endif
 
 TARGET_BUILD_VIA_BROWSER ?= true
